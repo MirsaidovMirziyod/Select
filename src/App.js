@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Select from "./Select";
 
-function App() {
+const options = [
+  {
+    title: "Первый вариант",
+    value: "1",
+  },
+  {
+    title: "Второй вариант",
+    value: "2",
+  },
+  // Add other options as needed
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Выберите вариант:</h1>
+      <Select options={options} placeholder="Выберите..." />
     </div>
   );
-}
+};
 
 export default App;
